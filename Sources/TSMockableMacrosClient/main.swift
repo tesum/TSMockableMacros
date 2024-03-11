@@ -1,4 +1,4 @@
-import Macros
+import TSMockableMacros
 
 //@Mockable
 class Car {
@@ -7,7 +7,7 @@ class Car {
 
 @Mockable
 public protocol CarProtocol {
-  var test: Int { get set }
+  var isStarted: Bool { get set }
   
   func startEngine(full: Bool) async throws -> Bool
   func startEngine(turnOn: Bool, completion: @escaping () -> Void)

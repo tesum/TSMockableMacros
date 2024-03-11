@@ -112,7 +112,7 @@ final class MacrosTests: XCTestCase {
 #endif
   }
   
-  func test_whenProtocolHasVariables_BlockIsGenerated() {
+  func test_whenProtocolHasVariables_BlockIsGenerated() throws {
 #if canImport(MacrosMacros)
     assertMacroExpansion(
             """

@@ -5,17 +5,17 @@ import PackageDescription
 import CompilerPluginSupport
 
 let package = Package(
-    name: "Macros",
+    name: "TSMockableMacros",
     platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v12), .watchOS(.v6), .visionOS(.v1)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Macros",
-            targets: ["Macros"]
+            name: "TSMockableMacros",
+            targets: ["TSMockableMacros"]
         ),
         .executable(
-            name: "MacrosClient",
-            targets: ["MacrosClient"]
+            name: "TSMockableMacrosClient",
+            targets: ["TSMockableMacrosClient"]
         ),
     ],
     dependencies: [
@@ -27,7 +27,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         // Macro implementation that performs the source transformation of a macro.
         .macro(
-            name: "MacrosMacros",
+            name: "TSMockableMacrosMacros",
             dependencies: [
                 .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
                 .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
@@ -35,16 +35,16 @@ let package = Package(
         ),
 
         // Library that exposes a macro as part of its API, which is used in client programs.
-        .target(name: "Macros", dependencies: ["MacrosMacros"]),
+        .target(name: "TSMockableMacros", dependencies: ["TSMockableMacrosMacros"]),
 
         // A client of the library, which is able to use the macro in its own code.
-        .executableTarget(name: "MacrosClient", dependencies: ["Macros"]),
+        .executableTarget(name: "TSMockableMacrosClient", dependencies: ["TSMockableMacros"]),
 
         // A test target used to develop the macro implementation.
         .testTarget(
-            name: "MacrosTests",
+            name: "TSMockableMacrosTests",
             dependencies: [
-                "MacrosMacros",
+                "TSMockableMacrosMacros",
                 .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax"),
             ]
         ),

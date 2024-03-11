@@ -21,7 +21,7 @@ import SwiftDiagnostics
 ///      }
 ///
 /// - Note: Can use with `async/await`, `completion` functions, also any variables.
-public struct MockableMacro: PeerMacro {
+public enum MockableMacro: PeerMacro {
   public static func expansion(
     of node: SwiftSyntax.AttributeSyntax,
     providingPeersOf declaration: some SwiftSyntax.DeclSyntaxProtocol,
