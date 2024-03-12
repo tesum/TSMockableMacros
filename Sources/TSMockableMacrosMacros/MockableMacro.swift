@@ -116,7 +116,7 @@ fileprivate extension FunctionDeclSyntax {
           \(access)var \(functionNameString)Called: Bool {
             return \(functionNameString)CallsCount > 0
           }
-          \(hasThrows ? "\(access)var \(functionNameString)Error: MockError?": "")
+          \(hasThrows ? "\(access)var \(functionNameString)Error: Error?": "")
           \(access)var \(functionNameString)Response: \(mockClosureType)
           
           \(access)func \(functionName)\(signature) {
