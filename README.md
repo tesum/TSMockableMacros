@@ -1,7 +1,7 @@
 <h1 align="center">TSMockableMacros</h1>
 
 <div align="center">
-  💻 🈺 🌸 🆔
+  💻 🤲 🌓 ⚒️
 </div>
 <div align="center">
   <strong>SPM Package for easily mocking out objects using macros</strong>
@@ -120,5 +120,11 @@ This will generate the CarProtocolMockable class, which contains variables and f
   ```
 </details>
 
+<h2 align="center">Motivation</h2>
 
+This is an alternative solution for [Sourcery](https://github.com/krzysztofzablocki/Sourcery) AutoMockable. I wanted to create mock classes in different projects, as our product is built using [tuist](https://github.com/tuist/tuist). I ran into the problem that Sourcery could only generate files in one folder, which was unacceptable to me. Therefore, I had to turn to the new features of Swift and study Macros.
 
+<h2 align="center">Alternative</h2>
+
+- [SwiftMocks](https://github.com/frugoman/SwiftMocks)
+- [swift-mock](https://github.com/MetalheadSanya/swift-mock)
