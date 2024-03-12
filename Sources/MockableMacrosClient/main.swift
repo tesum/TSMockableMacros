@@ -1,4 +1,4 @@
-import TSMockableMacros
+import MockableMacros
 
 //@Mockable
 class Car {

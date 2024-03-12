@@ -12,4 +12,4 @@
 ///
 /// - Note: Can use with `async/await`, `completion` functions, also any variables.
 @attached(peer, names: suffixed(Mockable))
-public macro Mockable() = #externalMacro(module: "TSMockableMacrosMacros", type: "MockableMacro")
+public macro Mockable() = #externalMacro(module: "MockableMacrosMacros", type: "MockableMacro")

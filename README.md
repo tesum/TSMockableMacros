@@ -1,4 +1,4 @@
-<h1 align="center">TSMockableMacros</h1>
+<h1 align="center">MockableMacros</h1>
 
 <div align="center">
   💻 🤲 🌓 ⚒️
